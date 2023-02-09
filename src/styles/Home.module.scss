@@ -1,0 +1,8 @@
+@import "../styles/variables.module.scss";
+
+.main {
+  height: 100vh;
+  font-family: $raleway;
+  background-color: $primary;
+  padding: 1rem;
+}

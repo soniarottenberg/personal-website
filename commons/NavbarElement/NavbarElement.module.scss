@@ -1,0 +1,10 @@
+@import "../../src/styles/variables.module.scss";
+
+.container {
+  color: $secondary;
+  padding: 0 1rem;
+  cursor: pointer;
+  &:hover {
+    color: $contrast;
+  }
+}

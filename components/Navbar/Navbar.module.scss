@@ -1,0 +1,19 @@
+@import "../../src/styles/variables.module.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.name {
+  width: 100%;
+  color: $secondary;
+}

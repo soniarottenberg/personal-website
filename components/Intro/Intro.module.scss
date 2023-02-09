@@ -1,0 +1,14 @@
+@import "../../src/styles/variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $contrast;
+}
+
+.secondaryTitle {
+  color: $secondary;
+}
