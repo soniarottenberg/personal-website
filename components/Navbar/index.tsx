@@ -10,7 +10,9 @@ const Navbar = ({ selectNavbarItem }: NavbarProps) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.name}>Sonia Rottenberg</div>
+      <div className={styles.name} onClick={() => selectNavbarItem("header")}>
+        Sonia Rottenberg
+      </div>
 
       <div className={styles.navContainer}>
         {elements.map((el, i) => (

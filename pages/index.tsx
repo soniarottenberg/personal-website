@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import styles from "/styles/Home.module.scss";
 import Navbar from "components/Navbar";
 import Header from "containers/Header";
 import About from "containers/About";
