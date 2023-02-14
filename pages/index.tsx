@@ -4,6 +4,9 @@ import styles from "/styles/Home.module.scss";
 import Navbar from "components/Navbar";
 import Header from "containers/Header";
 import About from "containers/About";
+import Stack from "containers/Stack";
+import Work from "containers/Work";
+import Contact from "containers/Contact";
 
 export default function Home() {
   const [section, setSection] = useState<string>("header");
@@ -15,6 +18,15 @@ export default function Home() {
 
       case "about":
         return <About />;
+
+      case "stack":
+        return <Stack />;
+
+      case "work":
+        return <Work />;
+
+      case "contact":
+        return <Contact />;
     }
   }, [section]);
 
