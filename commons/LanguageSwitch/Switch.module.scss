@@ -1,0 +1,30 @@
+@import "/styles/variables.module.scss";
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 6rem;
+}
+
+.button {
+  width: 2rem;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: $raleway;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.buttonActive {
+  @extend .button;
+  background-color: $secondary;
+  color: $primary;
+}
+
+.buttonInactive {
+  @extend .button;
+  background-color: $primary;
+  color: $secondary;
+}

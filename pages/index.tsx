@@ -1,3 +1,4 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useMemo, useState } from "react";
 import Head from "next/head";
 import styles from "/styles/Home.module.scss";
@@ -8,7 +9,15 @@ import Stack from "containers/Stack";
 import Work from "containers/Work";
 import Contact from "containers/Contact";
 
-export default function Home() {
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  };
+}
+
+const Home = () => {
   const [section, setSection] = useState<string>("header");
 
   const displaySection = useMemo(() => {
@@ -47,4 +56,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
