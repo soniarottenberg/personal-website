@@ -1,10 +1,14 @@
-@import "styles/variables.module.scss";
+@import "/styles/variables.module.scss";
 
 .container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.burgerMenuButtonContainer {
+  display: none;
 }
 
 .navContainer {
@@ -19,5 +23,20 @@
   cursor: pointer;
   &:hover {
     color: $contrast;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .navContainer {
+    display: none;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .burgerMenuButtonContainer {
+    display: block;
+    z-index: 1;
   }
 }

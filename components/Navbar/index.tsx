@@ -1,16 +1,18 @@
 import styles from "./Navbar.module.scss";
 import NavbarElement from "commons/NavbarElement";
 import LanguageSwitch from "commons/LanguageSwitch";
+import BurgerMenuButton from "commons/BurgerMenuButton";
 import { NavbarProps } from "typescript/interfaces";
 import { useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-const Navbar = ({ selectNavbarItem }: NavbarProps) => {
+const Navbar = ({
+  selectNavbarItem,
+  handleBurgerMenuButtonClick,
+  menuOpen,
+  options,
+}: NavbarProps) => {
   const { i18n } = useTranslation();
-
-  const navElements = useMemo(() => {
-    return ["about", "stack", "work", "contact"];
-  }, []);
 
   const handleLocale = useCallback(
     (data: string) => {
@@ -25,12 +27,18 @@ const Navbar = ({ selectNavbarItem }: NavbarProps) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.burgerMenuButtonContainer}>
+        <BurgerMenuButton
+          handleBurgerMenuButtonClick={() => handleBurgerMenuButtonClick()}
+          isMenuOpen={menuOpen}
+        />
+      </div>
       <div className={styles.name} onClick={() => selectNavbarItem("header")}>
         Sonia Rottenberg
       </div>
 
       <div className={styles.navContainer}>
-        {navElements.map((el, i) => (
+        {options.map((el, i) => (
           <NavbarElement
             key={i}
             label={el}

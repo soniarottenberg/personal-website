@@ -11,7 +11,19 @@ export interface NavbarElementProps {
   selectNavbarItem: (arg: string) => void;
 }
 
+export interface BurgerMenuButtonProps {
+  handleBurgerMenuButtonClick: () => void;
+  isMenuOpen: boolean;
+}
+
 // interfaces for component
 export interface NavbarProps {
   selectNavbarItem: (arg: string) => void;
+  handleBurgerMenuButtonClick: () => void;
+  menuOpen: boolean;
+  options: string[];
+}
+
+export interface MenuProps {
+  options: string[];
 }

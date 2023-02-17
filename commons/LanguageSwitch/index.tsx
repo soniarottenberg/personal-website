@@ -6,7 +6,6 @@ const LanguageSwitch = ({
   handleClick,
   currentLanguage,
 }: SwitchProps) => {
-  console.log("currentLanguage", currentLanguage);
   return (
     <div className={styles.container}>
       {options?.map((option, index) => (

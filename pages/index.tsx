@@ -8,6 +8,7 @@ import About from "containers/About";
 import Stack from "containers/Stack";
 import Work from "containers/Work";
 import Contact from "containers/Contact";
+import Menu from "components/Menu";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -19,6 +20,7 @@ export async function getStaticProps({ locale }: any) {
 
 const Home = () => {
   const [section, setSection] = useState<string>("header");
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const displaySection = useMemo(() => {
     switch (section) {
@@ -39,6 +41,10 @@ const Home = () => {
     }
   }, [section]);
 
+  const navElements = useMemo(() => {
+    return ["about", "stack", "work", "contact"];
+  }, []);
+
   return (
     <>
       <Head>
@@ -51,7 +57,13 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar selectNavbarItem={(data: string) => setSection(data)} />
+        <Navbar
+          selectNavbarItem={(data: string) => setSection(data)}
+          handleBurgerMenuButtonClick={() => setMenuOpen(!menuOpen)}
+          menuOpen={menuOpen}
+          options={navElements}
+        />
+        {menuOpen && <Menu options={navElements} />}
         {displaySection}
       </main>
     </>

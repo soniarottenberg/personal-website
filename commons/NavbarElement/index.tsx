@@ -5,11 +5,8 @@ import { useTranslation } from "react-i18next";
 const NavbarElement = ({ label, selectNavbarItem }: NavbarElementProps) => {
   const { t } = useTranslation();
   return (
-    <div
-      className={styles.container}
-      onClick={() => selectNavbarItem(t(`${label}`))}
-    >
-      {label}
+    <div className={styles.container} onClick={() => selectNavbarItem(label)}>
+      {t(label)}
     </div>
   );
 };
