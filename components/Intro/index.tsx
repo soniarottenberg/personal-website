@@ -5,7 +5,7 @@ const Intro = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{t("hello world.")}</h1>
+      <h1 className={styles.title}>{t("hello world")}</h1>
       <h3 className={styles.secondaryTitle}>{t("i am Sonia")}</h3>
       <h3 className={styles.secondaryTitle}>{t("front-end developper")}</h3>
     </div>

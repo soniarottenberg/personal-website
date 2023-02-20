@@ -4,7 +4,7 @@ import LanguageSwitch from "commons/LanguageSwitch";
 import BurgerMenuButton from "commons/BurgerMenuButton";
 import { NavbarProps } from "typescript/interfaces";
 import { useCallback, useEffect, useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const Navbar = ({
   selectNavbarItem,
