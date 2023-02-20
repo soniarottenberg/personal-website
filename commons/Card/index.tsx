@@ -9,12 +9,14 @@ const Card = ({ title, link, img, stack, description }: CardProps) => {
       <Link href={link} target="_blank">
         <div className={styles.imageContainer}>
           <div className={styles.titleContainer}>{title}</div>
-          <Image
-            alt={`${title}-link`}
-            src={img}
-            fill
-            style={{ objectFit: "cover", objectPosition: "top" }}
-          />
+          {img && (
+            <Image
+              alt={`${title}-link`}
+              src={img}
+              fill
+              style={{ objectFit: "cover", objectPosition: "top" }}
+            />
+          )}
         </div>
 
         <div className={styles.infoContainer}>

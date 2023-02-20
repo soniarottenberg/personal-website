@@ -6,6 +6,12 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.sectionTitle}>{t("contact").toUpperCase()}</div>
+      <div className={styles.infosContainer}>
+        <div>Email</div>
+        <div>Github</div>
+        <div>Linkedin</div>
+        <div>Behance</div>
+      </div>
     </div>
   );
 };

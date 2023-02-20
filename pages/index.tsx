@@ -64,6 +64,7 @@ const Home = () => {
           menuOpen={menuOpen}
           options={navElements}
         />
+
         {menuOpen && (
           <Menu
             options={navElements}

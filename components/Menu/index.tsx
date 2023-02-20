@@ -8,7 +8,7 @@ const Menu = ({ options, handleMenuSelection }: MenuProps) => {
     <div className={styles.container}>
       <div
         className={styles.menuItem}
-        onClick={() => handleMenuSelection("header")}
+        onClick={() => handleMenuSelection("home")}
       >
         {t("home")}
       </div>

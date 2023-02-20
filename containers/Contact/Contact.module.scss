@@ -3,6 +3,12 @@
 .container {
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.infosContainer {
+  display: flex;
+  flex-direction: column;
 }

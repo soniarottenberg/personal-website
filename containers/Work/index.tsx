@@ -9,7 +9,7 @@ const Work = () => {
     return [
       {
         title: "Now Online",
-        img: "/screens/epsor.jpeg",
+        img: "/screens/nowonline.png",
         link: "https://now.online/",
         stack: [
           "Nextjs",
@@ -23,7 +23,7 @@ const Work = () => {
       },
       {
         title: "Epsor",
-        img: "/screens/nowonline.png",
+        img: "/screens/epsor.jpeg",
         link: "https://epsor.fr/",
         stack: ["Reactjs", "Javascript", "Prismic"],
         description: "Growth",

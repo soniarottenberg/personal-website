@@ -3,10 +3,8 @@ import NavbarElement from "commons/NavbarElement";
 import LanguageSwitch from "commons/LanguageSwitch";
 import BurgerMenuButton from "commons/BurgerMenuButton";
 import { NavbarProps } from "typescript/interfaces";
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect } from "react";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
-import HomeButton from "commons/HomeButton";
 
 const Navbar = ({
   selectNavbarItem,
