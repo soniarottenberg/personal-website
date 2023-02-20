@@ -15,9 +15,11 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .name {
+  flex-shrink: 3;
   width: 100%;
   color: $secondary;
   cursor: pointer;
@@ -37,6 +39,5 @@
 
   .burgerMenuButtonContainer {
     display: block;
-    z-index: 1;
   }
 }

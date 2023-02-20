@@ -1,0 +1,42 @@
+@import "/styles/variables.module.scss";
+
+.container {
+  border: 1px solid $secondary;
+  box-shadow: 8px 8px 0px -1px $secondary;
+  color: $secondary;
+  width: 20rem;
+  height: 18rem;
+  cursor: pointer;
+  &:hover {
+    transition: ease-in 0.1s;
+    box-shadow: 10px 10px 0px -1px $secondary;
+  }
+}
+
+.imageContainer {
+  width: 20rem;
+  height: 12rem;
+  overflow: "hidden";
+  position: relative;
+}
+
+.titleContainer {
+  position: absolute;
+}
+
+.infoContainer {
+  padding: 1rem;
+}
+
+.stackContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stackElement {
+  padding-right: 0.2rem;
+}
+
+.lastStackElement {
+  padding: 0;
+}

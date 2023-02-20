@@ -5,6 +5,8 @@ import BurgerMenuButton from "commons/BurgerMenuButton";
 import { NavbarProps } from "typescript/interfaces";
 import { useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
+import HomeButton from "commons/HomeButton";
 
 const Navbar = ({
   selectNavbarItem,
@@ -34,7 +36,7 @@ const Navbar = ({
         />
       </div>
       <div className={styles.name} onClick={() => selectNavbarItem("header")}>
-        Sonia Rottenberg
+        <HomeButton />
       </div>
 
       <div className={styles.navContainer}>

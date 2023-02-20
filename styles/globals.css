@@ -11,3 +11,9 @@ h1 {
     font-weight: 600;
 }
 
+a {
+    all: unset;
+}
+
+
+

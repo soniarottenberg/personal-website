@@ -16,6 +16,14 @@ export interface BurgerMenuButtonProps {
   isMenuOpen: boolean;
 }
 
+export interface CardProps {
+  title: string;
+  img: string;
+  link: string;
+  stack: string[];
+  description: string;
+}
+
 // interfaces for component
 export interface NavbarProps {
   selectNavbarItem: (arg: string) => void;
@@ -26,4 +34,5 @@ export interface NavbarProps {
 
 export interface MenuProps {
   options: string[];
+  handleMenuSelection: (arg: string) => void;
 }

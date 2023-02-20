@@ -1,5 +1,5 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Head from "next/head";
 import styles from "/styles/Home.module.scss";
 import Navbar from "components/Navbar";
@@ -21,6 +21,11 @@ export async function getStaticProps({ locale }: any) {
 const Home = () => {
   const [section, setSection] = useState<string>("header");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const displaySectionMobile = useCallback((data: string) => {
+    setSection(data);
+    setMenuOpen(false);
+  }, []);
 
   const displaySection = useMemo(() => {
     switch (section) {
@@ -63,7 +68,12 @@ const Home = () => {
           menuOpen={menuOpen}
           options={navElements}
         />
-        {menuOpen && <Menu options={navElements} />}
+        {menuOpen && (
+          <Menu
+            options={navElements}
+            handleMenuSelection={(data: string) => displaySectionMobile(data)}
+          />
+        )}
         {displaySection}
       </main>
     </>

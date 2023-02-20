@@ -1,5 +1,29 @@
+@import "/styles/variables.module.scss";
+
 .container {
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cardsContainer {
+  display: flex;
+}
+
+.cardContainer {
+  margin: 1rem;
+}
+
+@media screen and (max-width: $mobile) {
+  .cardsContainer {
+    flex-direction: column;
+  }
+
+  .sectionTitle {
+    position: unset;
+    font-size: 6rem;
+  }
 }
