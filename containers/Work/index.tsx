@@ -1,8 +1,10 @@
 import Card from "commons/Card";
 import { useMemo } from "react";
+import { useTranslation } from "next-i18next";
 import styles from "./Work.module.scss";
 
 const Work = () => {
+  const { t } = useTranslation();
   const works = useMemo(() => {
     return [
       {
@@ -31,7 +33,7 @@ const Work = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.sectionTitle}>WORK</div>
+      <div className={styles.sectionTitle}>{t("work").toUpperCase()}</div>
       <div className={styles.cardsContainer}>
         {works.map((work) => (
           <div key={work.title} className={styles.cardContainer}>

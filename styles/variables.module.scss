@@ -25,4 +25,13 @@ $mobile: "425px";
   left: 0;
   font-family: $bitter;
   font-size: 6rem;
+  font-weight: 200;
+}
+
+@media screen and (max-width: $mobile) {
+  .sectionTitle {
+    position: unset;
+    font-size: 3rem;
+    white-space: nowrap;
+  }
 }

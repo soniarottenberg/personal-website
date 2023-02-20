@@ -35,11 +35,13 @@ const Navbar = ({
           isMenuOpen={menuOpen}
         />
       </div>
-      <div className={styles.name} onClick={() => selectNavbarItem("header")}>
-        <HomeButton />
-      </div>
 
       <div className={styles.navContainer}>
+        <NavbarElement
+          key={"home"}
+          label={"home"}
+          selectNavbarItem={selectNavbarItem}
+        />
         {options.map((el, i) => (
           <NavbarElement
             key={i}

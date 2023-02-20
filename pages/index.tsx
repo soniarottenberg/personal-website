@@ -5,7 +5,6 @@ import styles from "/styles/Home.module.scss";
 import Navbar from "components/Navbar";
 import Header from "containers/Header";
 import About from "containers/About";
-import Stack from "containers/Stack";
 import Work from "containers/Work";
 import Contact from "containers/Contact";
 import Menu from "components/Menu";
@@ -19,7 +18,7 @@ export async function getStaticProps({ locale }: any) {
 }
 
 const Home = () => {
-  const [section, setSection] = useState<string>("header");
+  const [section, setSection] = useState<string>("home");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const displaySectionMobile = useCallback((data: string) => {
@@ -29,14 +28,11 @@ const Home = () => {
 
   const displaySection = useMemo(() => {
     switch (section) {
-      case "header":
+      case "home":
         return <Header />;
 
       case "about":
         return <About />;
-
-      case "stack":
-        return <Stack />;
 
       case "work":
         return <Work />;
@@ -47,7 +43,7 @@ const Home = () => {
   }, [section]);
 
   const navElements = useMemo(() => {
-    return ["about", "stack", "work", "contact"];
+    return ["about", "work", "contact"];
   }, []);
 
   return (
