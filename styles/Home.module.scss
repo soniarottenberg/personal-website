@@ -2,6 +2,8 @@
 
 .main {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   font-family: $raleway;
   background-color: $primary;

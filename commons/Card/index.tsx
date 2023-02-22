@@ -20,7 +20,7 @@ const Card = ({ title, link, img, stack, description }: CardProps) => {
         </div>
 
         <div className={styles.infoContainer}>
-          <div>{title}</div>
+          <div className={styles.title}>{title}</div>
           <div className={styles.stackContainer}>
             {stack.map((element, index) => (
               <div

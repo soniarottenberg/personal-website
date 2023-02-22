@@ -16,12 +16,13 @@
 .imageContainer {
   width: 20rem;
   height: 12rem;
-  overflow: "hidden";
   position: relative;
 }
 
 .titleContainer {
+  font-family: $bitter;
   position: absolute;
+  top: -1rem;
 }
 
 .infoContainer {
