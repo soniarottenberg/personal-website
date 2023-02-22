@@ -5,6 +5,7 @@ import styles from "./Work.module.scss";
 
 const Work = () => {
   const { t } = useTranslation();
+
   const works = useMemo(() => {
     return [
       {
@@ -12,12 +13,12 @@ const Work = () => {
         img: "/screens/nowonline.png",
         link: "https://now.online/",
         stack: [
-          "Nextjs",
-          "Reactjs",
-          "Javascript",
-          "Sass",
-          "Storybook",
-          "GraphQL",
+          "nextjs",
+          "react",
+          "javascript",
+          "sass",
+          "storybook",
+          "graphql",
         ],
         description: "Marketplace",
       },
@@ -25,7 +26,7 @@ const Work = () => {
         title: "Epsor",
         img: "/screens/epsor.jpeg",
         link: "https://epsor.fr/",
-        stack: ["Reactjs", "Javascript", "Prismic"],
+        stack: ["react", "javascript", "prismic"],
         description: "Growth",
       },
     ];

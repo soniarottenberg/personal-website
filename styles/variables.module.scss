@@ -26,6 +26,7 @@ $mobile: "425px";
   font-family: $bitter;
   font-size: 6rem;
   font-weight: 200;
+  text-shadow: $highlight 4px 4px;
 }
 
 @media screen and (max-width: $mobile) {

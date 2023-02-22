@@ -16,6 +16,10 @@ export interface BurgerMenuButtonProps {
   isMenuOpen: boolean;
 }
 
+export interface IconProps {
+  icon: string;
+}
+
 export interface CardProps {
   title: string;
   img: string;
