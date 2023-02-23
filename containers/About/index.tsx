@@ -7,8 +7,6 @@ const About = () => {
   const { t } = useTranslation();
   const [activeText, setActiveText] = useState({ date: "", description: "" });
 
-  console.log("activeText", activeText);
-
   const historyData = useMemo(() => {
     return [
       {
