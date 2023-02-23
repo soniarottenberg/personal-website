@@ -1,0 +1,49 @@
+@import "/styles/variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.lineContainer {
+  width: 100vw;
+  height: 0.2rem;
+  background-color: $secondary;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dateContainer {
+  position: relative;
+}
+
+.stop {
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 0.3rem solid $primary;
+  border-radius: 50%;
+  background-color: $highlight;
+}
+
+.date {
+  min-width: 5rem;
+  position: absolute;
+  top: -3rem;
+  left: -1.5rem;
+}
+
+.activeTextContainer {
+  margin-top: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+@media screen and (max-width: $mobile) {
+  .container {
+    display: none;
+  }
+}

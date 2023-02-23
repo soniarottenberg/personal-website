@@ -41,3 +41,9 @@
 .lastStackElement {
   padding: 0;
 }
+
+@media screen and (max-width: $mobile) {
+  .container {
+    width: auto;
+  }
+}

@@ -1,4 +1,4 @@
-import Card from "commons/Card";
+import Card from "commons/WorkCard";
 import { useMemo } from "react";
 import { useTranslation } from "next-i18next";
 import styles from "./Work.module.scss";

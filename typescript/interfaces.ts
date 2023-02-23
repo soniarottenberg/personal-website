@@ -20,11 +20,19 @@ export interface IconProps {
   icon: string;
 }
 
+export interface TagProps {
+  label: string;
+}
+
 export interface CardProps {
   title: string;
   img: string;
   link: string;
   stack: string[];
+  description: string;
+}
+
+export interface ResumeCardProps {
   description: string;
 }
 
@@ -39,4 +47,11 @@ export interface NavbarProps {
 export interface MenuProps {
   options: string[];
   handleMenuSelection: (arg: string) => void;
+}
+
+export interface TimelineProps {
+  history: {
+    date: string;
+    description: string;
+  }[];
 }

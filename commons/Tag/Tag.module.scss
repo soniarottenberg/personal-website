@@ -1,0 +1,28 @@
+@import "/styles/variables.module.scss";
+
+.container {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem;
+  white-space: nowrap;
+  background-color: $highlight;
+  box-shadow: 4px 4px 0px -1px $contrast;
+  &:hover {
+    transform: translateY(-0.5rem);
+    transition: ease-in 0.2s;
+  }
+}
+
+.triangleDown {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 1rem;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 10px solid $highlight;
+}
