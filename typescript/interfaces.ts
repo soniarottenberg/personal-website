@@ -18,6 +18,7 @@ export interface BurgerMenuButtonProps {
 
 export interface IconProps {
   icon: string;
+  size: "small" | "medium";
 }
 
 export interface TagProps {

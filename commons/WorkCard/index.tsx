@@ -25,7 +25,7 @@ const Card = ({ title, link, img, stack, description }: CardProps) => {
           <div className={styles.stackContainer}>
             {stack.map((element) => (
               <div key={element} className={styles.iconContainer}>
-                <Icon icon={element} />
+                <Icon icon={element} size={"small"} />
               </div>
             ))}
           </div>

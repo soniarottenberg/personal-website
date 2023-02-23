@@ -11,5 +11,16 @@
 
 .infosContainer {
   display: flex;
-  flex-direction: column;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (max-width: $mobile) {
+  .infosContainer {
+    padding-top: 1rem;
+    flex-direction: column;
+  }
 }
