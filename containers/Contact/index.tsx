@@ -7,7 +7,6 @@ const Contact = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.container}>
-      <div className={styles.sectionTitle}>{t("contact").toUpperCase()}</div>
       <div className={styles.infosContainer}>
         <Link
           href={"https://www.behance.net/soniarottenberg"}

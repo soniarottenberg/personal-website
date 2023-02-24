@@ -34,7 +34,6 @@ const Work = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.sectionTitle}>{t("work").toUpperCase()}</div>
       <div className={styles.cardsContainer}>
         {works.map((work) => (
           <div key={work.title} className={styles.cardContainer}>

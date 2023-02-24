@@ -1,16 +1,15 @@
 // font
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100&display=swap");
-$raleway: "Raleway", sans-serif;
-$bitter: "Bitter", serif;
+
+$primaryFont: "Raleway", sans-serif;
+$secondaryFont: "Libre Baskerville", serif;
 
 // color scheme
 
-$primary: #264653;
-$secondary: #2a9d8f;
-$highlight: #e9c46a;
-$complementary: #f4a261;
-$contrast: #e76f51;
+$primary: #333745;
+$secondary: #e63462;
+$highlight: #fe5f55;
+$complementary: #c7efcf;
+$contrast: #eef5db;
 
 // media queries
 
@@ -20,13 +19,16 @@ $mobile: "480px";
 
 .sectionTitle {
   color: $contrast;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: $bitter;
-  font-size: 6rem;
+  font-family: $secondaryFont;
+  font-size: 3rem;
   font-weight: 200;
-  text-shadow: $highlight 4px 4px;
+  text-shadow: $highlight 1px 1px;
+  white-space: nowrap;
+}
+
+.header {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: $mobile) {

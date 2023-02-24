@@ -8,6 +8,7 @@ import About from "containers/About";
 import Work from "containers/Work";
 import Contact from "containers/Contact";
 import Menu from "components/Menu";
+import { useTranslation } from "react-i18next";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -20,6 +21,7 @@ export async function getStaticProps({ locale }: any) {
 const Home = () => {
   const [section, setSection] = useState<string>("home");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const { t } = useTranslation();
 
   const displaySectionMobile = useCallback((data: string) => {
     setSection(data);
@@ -58,12 +60,15 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar
-          selectNavbarItem={(data: string) => setSection(data)}
-          handleBurgerMenuButtonClick={() => setMenuOpen(!menuOpen)}
-          menuOpen={menuOpen}
-          options={navElements}
-        />
+        <div className={styles.header}>
+          <div className={styles.sectionTitle}>{t(section).toUpperCase()}</div>
+          <Navbar
+            selectNavbarItem={(data: string) => setSection(data)}
+            handleBurgerMenuButtonClick={() => setMenuOpen(!menuOpen)}
+            menuOpen={menuOpen}
+            options={navElements}
+          />
+        </div>
 
         {menuOpen && (
           <Menu

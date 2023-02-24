@@ -1,11 +1,10 @@
 import styles from "./About.module.scss";
 import { useTranslation } from "next-i18next";
 import Timeline from "components/Timeline";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 
 const About = () => {
   const { t } = useTranslation();
-  const [activeText, setActiveText] = useState({ date: "", description: "" });
 
   const historyData = useMemo(() => {
     return [
@@ -51,7 +50,6 @@ const About = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.sectionTitle}>{t("about").toUpperCase()}</div>
       <Timeline history={historyData} />
     </div>
   );
