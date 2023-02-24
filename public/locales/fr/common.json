@@ -6,5 +6,7 @@
   "about": "à propos",
   "stack": "technos",
   "work": "travaux",
-  "contact": "contact"
+  "contact": "contact",
+  "epsor job description": "Développement de nouvelles pages sur epsor.fr. Respect des maquettes et des contraintes de responsive.",
+  "nowonline job description": "Développement du front-end et améliorations UI/UX de la marketplace now.online et voox.online."
 }

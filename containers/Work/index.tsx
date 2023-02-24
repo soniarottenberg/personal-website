@@ -1,11 +1,8 @@
 import Card from "commons/WorkCard";
 import { useMemo } from "react";
-import { useTranslation } from "next-i18next";
 import styles from "./Work.module.scss";
 
 const Work = () => {
-  const { t } = useTranslation();
-
   const works = useMemo(() => {
     return [
       {
@@ -20,14 +17,14 @@ const Work = () => {
           "storybook",
           "graphql",
         ],
-        description: "Marketplace",
+        description: "nowonline job description",
       },
       {
         title: "Epsor",
         img: "/screens/epsor.jpeg",
         link: "https://epsor.fr/",
         stack: ["react", "javascript", "prismic"],
-        description: "Growth",
+        description: "epsor job description",
       },
     ];
   }, []);

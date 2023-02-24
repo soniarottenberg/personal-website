@@ -8,7 +8,7 @@ import About from "containers/About";
 import Work from "containers/Work";
 import Contact from "containers/Contact";
 import Menu from "components/Menu";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 export async function getStaticProps({ locale }: any) {
   return {
