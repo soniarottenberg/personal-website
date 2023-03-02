@@ -10,7 +10,7 @@ const About = () => {
     return [
       {
         date: "2016",
-        description: "Graduate from l'ISCOM Lyon in Communication & Markeking",
+        description: "Graduate from ISCOM Lyon in Communication & Markeking",
       },
       {
         date: "2017",

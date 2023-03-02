@@ -1,8 +1,10 @@
 import styles from "./ResumeCard.module.scss";
 import { ResumeCardProps } from "typescript/interfaces";
+import { useTranslation } from "next-i18next";
 
 const ResumeCard = ({ description }: ResumeCardProps) => {
-  return <div className={styles.container}>{description}</div>;
+  const { t } = useTranslation();
+  return <div className={styles.container}>{t(description)}</div>;
 };
 
 export default ResumeCard;
