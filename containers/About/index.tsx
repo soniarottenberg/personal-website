@@ -50,6 +50,9 @@ const About = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.sectionTitleMobile}>
+        {t("about").toUpperCase()}
+      </div>
       <Timeline history={historyData} />
     </div>
   );

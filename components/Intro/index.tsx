@@ -5,6 +5,9 @@ const Intro = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.container}>
+      <div className={styles.sectionTitleMobile}>
+        {t("hello").toUpperCase()}
+      </div>
       <h3 className={styles.secondaryTitle}>{t("i am Sonia")}</h3>
       <h3 className={styles.secondaryTitle}>{t("front-end developper")}</h3>
     </div>

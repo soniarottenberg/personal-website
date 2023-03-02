@@ -18,6 +18,9 @@
 }
 
 @media screen and (max-width: $mobile) {
+  .container {
+    padding-top: 3rem;
+  }
   .cardsContainer {
     flex-direction: column;
   }
