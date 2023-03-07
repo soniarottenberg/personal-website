@@ -19,12 +19,11 @@
 
 .buttonActive {
   @extend .button;
-  background-color: $secondary;
-  color: $primary;
+  background-color: $complementary;
 }
 
 .buttonInactive {
   @extend .button;
   background-color: $primary;
-  color: $secondary;
+  color: $complementary;
 }

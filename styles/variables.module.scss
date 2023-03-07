@@ -5,11 +5,11 @@ $secondaryFont: "Libre Baskerville", serif;
 
 // color scheme
 
-$primary: #333745;
-$secondary: #e63462;
-$highlight: #fe5f55;
-$complementary: #c7efcf;
-$contrast: #eef5db;
+$primary: #586ba4;
+$secondary: #324376;
+$highlight: #f5dd90;
+$complementary: #f68e5f;
+$contrast: #f76c5e;
 
 // media queries
 
@@ -49,5 +49,6 @@ $mobile: "480px";
     font-weight: 200;
     text-shadow: $highlight 1px 1px;
     white-space: nowrap;
+    z-index: 1;
   }
 }

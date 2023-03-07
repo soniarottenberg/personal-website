@@ -8,3 +8,9 @@
   font-family: $primaryFont;
   background-color: $primary;
 }
+
+@media screen and (max-width: $mobile) {
+  .main {
+    width: 100vw;
+  }
+}

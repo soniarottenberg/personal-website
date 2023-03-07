@@ -1,10 +1,81 @@
 @import "styles/variables.module.scss";
 
+@keyframes floatVertical {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(0.5rem);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatHorizontal {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(0.8rem);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .secondaryTitle {
+  z-index: 1;
   color: $secondary;
+  mix-blend-mode: color-burn;
+  font-size: 1.5rem;
+}
+
+.circle {
+  border-radius: 100%;
+  position: absolute;
+  bottom: -4rem;
+  right: 6rem;
+  height: 14rem;
+  width: 14rem;
+  background-color: $secondary;
+  opacity: 0.3;
+  animation: floatVertical 6s ease-in-out infinite;
+}
+
+.secondCircle {
+  border-radius: 100%;
+  position: absolute;
+  top: -3rem;
+  left: 5rem;
+  height: 18rem;
+  width: 18rem;
+  background-color: $complementary;
+  animation: floatHorizontal 6s ease-in-out infinite;
+}
+
+@media screen and (max-width: $mobile) {
+  .container {
+    width: 100vw;
+  }
+
+  .circle {
+    bottom: -2rem;
+    right: 10rem;
+    height: 16rem;
+    width: 16rem;
+  }
+
+  .secondCircle {
+    top: 2rem;
+    left: 7rem;
+    height: 20rem;
+    width: 20rem;
+  }
 }
