@@ -54,6 +54,7 @@ const About = () => {
         {t("about").toUpperCase()}
       </div>
       <Timeline history={historyData} />
+      <div className={styles.timelineMobile}>{t("about mobile version")}</div>
     </div>
   );
 };

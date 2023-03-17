@@ -12,3 +12,16 @@
 .cardsContainer {
   display: flex;
 }
+
+.timelineMobile {
+  display: none;
+}
+
+@media screen and (max-width: $mobile) {
+  .timelineMobile {
+    display: flex;
+    color: $secondary;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
